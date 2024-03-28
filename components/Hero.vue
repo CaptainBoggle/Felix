@@ -43,11 +43,9 @@ import { switchHighlightColor } from '~/colors';
       </div>
     </div>
 
-    <NuxtPicture
+    <img
       alt="Image of Felix Montanari"
       class="order-first mx-auto w-9/12 lg:order-1 lg:mr-0 lg:w-fit lg:text-right"
-      format="avif,webp"
-      :img-attrs="{ class: 'mr-auto lg:mr-0 ml-auto lg:text-right' }"
       src="/felix-montanari-image.png"
     />
   </section>

@@ -2,7 +2,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    '@nuxt/image',
+    [
+      '@nuxt/image',
+      {
+        provider: 'static',
+        dir: 'assets/images',
+      },
+
+    ],
     '@nuxt/content',
     '@nuxtjs/sitemap',
     'nuxt-simple-robots',
