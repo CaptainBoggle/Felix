@@ -45,7 +45,8 @@ import { switchHighlightColor } from '~/colors';
 
     <img
       alt="Image of Felix Montanari"
-      class="mr-auto lg:mr-0 ml-auto lg:text-right"
+      class="order-first mx-auto w-9/12 lg:order-1 lg:mr-0 lg:w-fit lg:text-right"
+      style="width: 50%"
       src="/felix-montanari-image.png"
     />
   </section>
