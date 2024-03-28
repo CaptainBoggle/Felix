@@ -55,7 +55,7 @@ const projects: Project[] = [
     homepageUrl: '',
     languages: [
       {
-        color: '#f1e05a',
+        color: '#00ADD8',
         name: 'Go',
       },
       {
