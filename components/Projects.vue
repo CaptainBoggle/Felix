@@ -4,7 +4,7 @@ import type { Project } from '~/github';
 const projects: Project[] = [
   {
     description: 'A super stealthy linux rootkit PoC targeting modern kernel versions.',
-    homepageUrl: 'https://kris.felixmontanari.com',
+    homepageUrl: '',
     languages: [
       {
         color: '#f34b7d',
@@ -83,8 +83,8 @@ const projects: Project[] = [
         color: '#38B2AC',
       },
     ],
-    name: 'personal-website',
-    url: 'https://github.com/CaptainBoggle/personal-website',
+    name: 'this!',
+    url: 'https://github.com/CaptainBoggle/felix',
   }
 ];
 
