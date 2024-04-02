@@ -27,9 +27,9 @@
         </div>
   
         <div>
-            LICENSE			assets			content			node_modules		package.json		tailwind.config.ts
+            LICENSE			assets			content		package.json		tailwind.config.ts
 README.md		colors			error.vue		nuxt.config.ts		pages			tsconfig.json
-app.vue			components		github.ts		package-lock.json	public		run.sh
+app.vue			components	public		run.sh
         </div>
   
         <div class="flex gap-4">
