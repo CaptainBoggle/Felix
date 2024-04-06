@@ -13,7 +13,7 @@ import { switchHighlightColor } from '~/colors';
       >
         <span
           class="text-[color:var(--highlight)] duration-300"
-          @focus="switchHighlightColor"
+          @load="switchHighlightColor"
           @mouseenter="switchHighlightColor"
           >Hey,</span
         >
