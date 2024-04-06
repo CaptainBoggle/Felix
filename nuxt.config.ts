@@ -2,17 +2,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    [
-      '@nuxt/image',
-      {
-        provider: 'static',
-        dir: 'assets/images',
-      },
-
-    ],
     '@nuxt/content',
     '@nuxtjs/sitemap',
     'nuxt-simple-robots',
+    "@nuxt/image"
   ],
 
   postcss: {
@@ -50,7 +43,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    domains: ['felixmontanari.com'],
+    dir: 'assets/img',
   },
 
   site: {
