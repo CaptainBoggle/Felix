@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { switchHighlightColor } from '~/colors';
+
+onMounted(() => {
+  switchHighlightColor();
+});
 </script>
 
 <template>
@@ -13,7 +17,6 @@ import { switchHighlightColor } from '~/colors';
       >
         <span
           class="text-[color:var(--highlight)] duration-300"
-          @load="switchHighlightColor"
           @mouseenter="switchHighlightColor"
           >Hey,</span
         >
