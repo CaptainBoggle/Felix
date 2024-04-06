@@ -6,7 +6,7 @@
     <Animation v-show="!showContent" @end-animation="showContent = true" />
   </Transition>
 
-  <template v-if="showContent">
+  <template v-show="showContent">
     <Navigation />
 
     <NuxtPage />
