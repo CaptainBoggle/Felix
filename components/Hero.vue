@@ -49,6 +49,7 @@ import { switchHighlightColor } from '~/colors';
       format="avif,webp"
       :img-attrs="{ class: 'mr-auto lg:mr-0 ml-auto lg:text-right' }"
       src="/felix-montanari-image.png"
+      loading="lazy"
     />
 
   </section>
