@@ -24,7 +24,7 @@ const projects: Project[] = [
       },
     ],
     name: 'sshnoop',
-    url: 'https://github.com/GeorgeMuscat/sshnoop',
+    url: 'https://github.com/CaptainBoggle/sshnoop',
   },
   {
     description: 'Stream McLaren\'s team radio to your discord server using their undocumented API.',
