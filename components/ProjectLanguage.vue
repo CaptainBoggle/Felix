@@ -12,22 +12,15 @@ const customLanguageColors: Record<string, string> = {
 </script>
 
 <template>
-  <div
-    class="rounded px-2 py-1"
-    :language="language"
-    :style="{
-      backgroundColor: language?.color || 'deeppink',
-    }"
-  >
-    <p
-      class="text-sm font-medium brightness-50"
-      :style="{
-        color:
-          customLanguageColors[language?.name?.toLowerCase() || ''] ||
-          language?.color ||
-          'deeppink',
-      }"
-    >
+  <div class="rounded px-2 py-1" :language="language" :style="{
+    backgroundColor: language?.color || 'deeppink',
+  }">
+    <p class="text-sm font-medium brightness-50" :style="{
+      color:
+        customLanguageColors[language?.name?.toLowerCase() || ''] ||
+        language?.color ||
+        'deeppink',
+    }">
       {{ language.name }}
     </p>
   </div>

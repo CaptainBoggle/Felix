@@ -1,8 +1,6 @@
 <template>
-  <div 
-    class="flex flex-col gap-1 rounded bg-white-secondary p-4 dark:bg-white-primary cursor-pointer" 
-    @click="openProject"
-  >
+  <div class="flex flex-col gap-1 rounded bg-white-secondary p-4 dark:bg-white-primary cursor-pointer"
+    @click="openProject">
     <span class="text-dark-primary text-xl font-semibold dark:text-black-primary">{{ project.name }}</span>
 
     <p class="text-dark-secondary dark:text-black-primary" :class="{ 'mb-5': project?.languages?.length }">

@@ -1,22 +1,19 @@
 <template>
-    <section
-      ref="pageRef"
-      class="page relative mx-4 h-[100dvh] overflow-hidden py-4 2xl:mx-40 2xl:py-28"
-    >
-      <slot />
-    </section>
-  </template>
-  
-  <script setup lang="ts">
-  import { onMounted, ref } from "vue";
-  
-  type PageProps = { pageId: string };
+  <section ref="pageRef" class="page relative mx-4 h-[100dvh] overflow-hidden py-4 2xl:mx-40 2xl:py-28">
+    <slot />
+  </section>
+</template>
 
-  const { pageId } = defineProps<PageProps>();
+<script setup lang="ts">
+import { onMounted, ref } from "vue";
 
-  const activePage = ref("landing");
+type PageProps = { pageId: string };
 
-  function isVisible(el: Element) {
+const { pageId } = defineProps<PageProps>();
+
+const activePage = ref("landing");
+
+function isVisible(el: Element) {
   const rect = el.getBoundingClientRect();
 
   const htmlHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -29,30 +26,29 @@
 }
 
 
-  const pageRef = ref<HTMLDivElement | null>(null);
-  
-  onMounted(() => {
-    async function onScroll() {
-      // Wait for scroll to complete
-      await new Promise((res) => setTimeout(res, 700));
-  
-      if (isVisible(pageRef.value!)) {
-        activePage.value = pageId;
-      }
+const pageRef = ref<HTMLDivElement | null>(null);
+
+onMounted(() => {
+  async function onScroll() {
+    // Wait for scroll to complete
+    await new Promise((res) => setTimeout(res, 700));
+
+    if (isVisible(pageRef.value!)) {
+      activePage.value = pageId;
     }
-  
-    function onHashChange(e: HashChangeEvent) {
-      const hash = e.newURL.split("#")[1];
-      if (!hash) return;
-      activePage.value = hash;
-    }
-  
-    window.addEventListener("wheel", onScroll, { passive: true });
-    window.addEventListener("touchstart", onScroll, { passive: true });
-    window.addEventListener("touchmove", onScroll, { passive: true });
-    window.addEventListener("hashchange", onHashChange, { passive: true });
-  });
-  
-  defineExpose({ pageRef });
-  </script>
-  
+  }
+
+  function onHashChange(e: HashChangeEvent) {
+    const hash = e.newURL.split("#")[1];
+    if (!hash) return;
+    activePage.value = hash;
+  }
+
+  window.addEventListener("wheel", onScroll, { passive: true });
+  window.addEventListener("touchstart", onScroll, { passive: true });
+  window.addEventListener("touchmove", onScroll, { passive: true });
+  window.addEventListener("hashchange", onHashChange, { passive: true });
+});
+
+defineExpose({ pageRef });
+</script>

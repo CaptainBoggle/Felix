@@ -10,11 +10,8 @@
       <div class="my-2 flex items-center gap-2">
         <IconsEmail height="20" width="20" />
 
-        <a
-          class="text-xl text-black-primary underline dark:text-white-primary"
-          href="mailto:felix.montanari@proton.me"
-          >felix.montanari@proton.me</a
-        >
+        <a class="text-xl text-black-primary underline dark:text-white-primary"
+          href="mailto:felix.montanari@proton.me">felix.montanari@proton.me</a>
       </div>
 
       <div class="mb-4 flex items-center gap-2">

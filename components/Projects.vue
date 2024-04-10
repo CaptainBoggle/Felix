@@ -95,15 +95,7 @@ const projects: Project[] = [
     <SectionTitle> Projects </SectionTitle>
 
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-      <Project
-        v-for="(project, projectIndex) of projects"
-        :key="projectIndex"
-        :project="project"
-      />
+      <Project v-for="(project, projectIndex) of projects" :key="projectIndex" :project="project" />
     </div>
   </section>
 </template>
-
-
-
-

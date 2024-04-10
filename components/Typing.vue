@@ -36,8 +36,6 @@ const charIndex = ref(0);
 const caretVisible = ref(true);
 
 function typewriter() {
-  let loop = 0;
-
   if (count.value === -1) {
     count.value = 0;
     setTimeout(typewriter, delay);
@@ -60,8 +58,7 @@ function typewriter() {
     onTyped(array[arrayIndex.value]);
 
     if (count.value === array.length) {
-      loop += 1;
-      if (loop === iterations) {
+      if (iterations > 0) {
         return (typeStatus.value = false);
       }
     }

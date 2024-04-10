@@ -11,7 +11,7 @@
         <h1>{{ doc.title }}</h1>
 
         <p class="font-medium">
-          By Mads Hougesen<template v-if="doc['date created']?.length"
+          By Felix Montanari<template v-if="doc['date created']?.length"
             >, {{ new Date(doc['date created']).toDateString() }}
           </template>
         </p>
